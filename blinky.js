@@ -33,7 +33,7 @@ function Blinky(port) {
 util.inherits(Blinky, EventEmitter);
 
 Blinky.prototype.setPixel = function(pixelIndex, r, g, b) {
-  if (pixelIndex > 60 || pixelIndex < 0) {
+  if (pixelIndex >= 60 || pixelIndex < 0) {
     return;
   }
 
